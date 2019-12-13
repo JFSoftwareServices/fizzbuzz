@@ -6,11 +6,8 @@ the number and for the multiples of five print “Buzz”. For numbers which are
 the application five prints “FizzBuzz”.
 
 
-### Running the Application
-To run tests
-
 ### Running the Tests
 To run tests simply run "mvn clean test" from the commandline.
 
-### Results
-Results are available in the commandline shell.
+### Test Results
+Results are visible in the commandline shell after running tests.
