@@ -7,7 +7,7 @@ public class FizzBuzzApplication {
 
     private void run() {
         CompositeRule compositeRule = new CompositeRule();
-        for (int i = 1; i < 100; i++) {
+        for (int i = 1; i <= 100; i++) {
             System.out.println(compositeRule.apply(i)) ;
         }
     }
