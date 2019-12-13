@@ -7,8 +7,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Rather than testing all the possible values in the range 1..100, the tests assume that some values would make the
- * system behave in the same way. For example testing for the integer 5 is the same as testing for integer 100 for
- * test in this class.
+ * system behave in the same way. For example testing for the integer 5 is the same as testing for integer 35 for
+ * certain test in this class.
+ * <p>
+ * Additionally the test are executed at value boundaries, for example 5 and 100 when testing that "Buzz" is returned.
  */
 class BuzzRuleTest {
 
