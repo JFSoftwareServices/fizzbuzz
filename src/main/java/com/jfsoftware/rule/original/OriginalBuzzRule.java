@@ -1,10 +1,10 @@
 package com.jfsoftware.rule.original;
 
+import com.jfsoftware.Number;
 import com.jfsoftware.rule.Rule;
 
 /**
  * A rule that describes the conditions under which "Buzz" is returned in the original fizzBuzz problem.
- *
  */
 public class OriginalBuzzRule implements Rule {
     private Rule next;
@@ -15,6 +15,6 @@ public class OriginalBuzzRule implements Rule {
 
     @Override
     public String apply(int number) {
-        return number % 5 == 0 ? "Buzz" : next.apply(number);
+        return new Number(number).isMultipleOf(5) ? "Buzz" : next.apply(number);
     }
 }

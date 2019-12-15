@@ -19,7 +19,7 @@ public class OriginalCompositeRule implements Rule {
     }
 
     @Override
-    public String apply(int integer) {
-        return fizzBuzzRule.apply(integer);
+    public String apply(int number) {
+        return fizzBuzzRule.apply(number);
     }
 }
