@@ -1,5 +1,6 @@
 package com.jfsoftware.rule.stagetwo;
 
+import com.jfsoftware.Number;
 import com.jfsoftware.rule.Rule;
 
 
@@ -9,15 +10,14 @@ import com.jfsoftware.rule.Rule;
 public class StageTwoBuzzRule implements Rule {
     private Rule next;
 
-    StageTwoBuzzRule(final Rule next) {
+    StageTwoBuzzRule(Rule next) {
         this.next = next;
     }
 
     @Override
-    public String apply(final int number) {
-
-
-        return next.apply(number);
+    public String apply(int n) {
+        Number number = new Number(n);
+        return number.isMultipleOfOrContains(5) ?
+                "Buzz" : next.apply(n);
     }
-
 }

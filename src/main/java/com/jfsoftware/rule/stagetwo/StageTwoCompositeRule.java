@@ -11,10 +11,10 @@ public class StageTwoCompositeRule implements Rule {
     private Rule fizzBuzzRule;
 
     public StageTwoCompositeRule() {
-        Rule rule = new NoMatchRule();
-        rule = new StageTwoBuzzRule(rule);
-        rule = new StageTwoFizzRule(rule);
-        fizzBuzzRule = new StageTwoFizzBuzzRule(rule);
+        Rule noMatchRule = new NoMatchRule();
+        Rule buzzRule = new StageTwoBuzzRule(noMatchRule);
+        Rule fizzRule = new StageTwoFizzRule(buzzRule);
+        fizzBuzzRule = new StageTwoFizzBuzzRule(fizzRule);
     }
 
     @Override

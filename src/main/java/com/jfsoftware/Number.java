@@ -10,11 +10,15 @@ public class Number {
         this.number = number;
     }
 
-    public boolean isMultipleOf(int divisor) {
-        return number % divisor == 0;
+    public boolean isMultipleOf(int num) {
+        return number % num == 0;
     }
 
-    public boolean containsDigit(int digit) {
-        return valueOf(number).contains(valueOf(digit));
+    private boolean containsNumber(int num) { //TODO
+        return valueOf(number).contains(valueOf(num));
+    }
+
+    public boolean isMultipleOfOrContains(final int num) {
+        return isMultipleOf(num) || containsNumber(num);
     }
 }

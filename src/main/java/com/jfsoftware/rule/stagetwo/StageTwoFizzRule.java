@@ -1,5 +1,6 @@
 package com.jfsoftware.rule.stagetwo;
 
+import com.jfsoftware.Number;
 import com.jfsoftware.rule.Rule;
 
 /**
@@ -13,8 +14,9 @@ public class StageTwoFizzRule implements Rule {
     }
 
     @Override
-    public String apply(final int number) {
-
-        return next.apply(number);
+    public String apply(int n) {
+        Number number = new Number(n);
+        return number.isMultipleOfOrContains(3) ?
+                "Fizz" : next.apply(n);
     }
 }
