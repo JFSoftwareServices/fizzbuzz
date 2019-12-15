@@ -23,7 +23,7 @@ class StageTwoFizzBuzzTest {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {5, 10, 15, 100})
+    @ValueSource(ints = {5, 10, 20,})
     void multiplesOfFiveOrContainFive(int number) {
         assertThat(rule.apply(number)).isEqualTo("Buzz");
     }
