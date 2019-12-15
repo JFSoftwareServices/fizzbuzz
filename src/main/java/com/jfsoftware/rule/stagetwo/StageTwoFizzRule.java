@@ -1,6 +1,6 @@
 package com.jfsoftware.rule.stagetwo;
 
-import com.jfsoftware.Number;
+import com.jfsoftware.rule.Number;
 import com.jfsoftware.rule.Rule;
 
 /**
