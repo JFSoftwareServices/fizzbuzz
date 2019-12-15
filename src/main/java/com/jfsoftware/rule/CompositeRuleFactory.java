@@ -8,10 +8,10 @@ import static java.lang.System.getProperty;
 /**
  * This factory returns the CompositeRule to be used during application execution.
  * <p>
- * The rule is created dynamically depending on the the value of the fizzBuzz system property set.
+ * The rule is created dynamically depending on the the value of the application system property set.
  * <p>
- * The system property fizzBuzz is set from the commandline as either -DfizzBuzz=original or
- * -DfizzBuzz=stageTwo
+ * The system property application is set from the commandline as either -Dapplication=original or
+ * -Dapplication=stageTwo
  */
 public final class CompositeRuleFactory {
     private static final String APPLICATION = "application";
@@ -29,7 +29,7 @@ public final class CompositeRuleFactory {
         } else if (getProperty(APPLICATION).equals("stageTwo")) {
             rule = new StageTwoCompositeRule();
         } else {
-            throw new IllegalArgumentException("Set system property using either '-Dapplication=original' or '-DapplicationBuz=stageTwo'");
+            throw new IllegalArgumentException("Set system property using either '-Dapplication=original' or '-Dapplication=stageTwo'");
         }
 
         return rule;
