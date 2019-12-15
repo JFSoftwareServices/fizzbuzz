@@ -22,7 +22,7 @@ class OriginalFizzBuzzTest {
         rule = CompositeRuleFactory.create();
     }
 
-   @ParameterizedTest
+    @ParameterizedTest
     @ValueSource(ints = {5, 10, 95, 100})
     void multiplesOfFive(int number) {
         assertThat(rule.apply(number)).isEqualTo("Buzz");

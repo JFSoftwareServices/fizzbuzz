@@ -10,7 +10,7 @@ public class FizzBuzzApplication {
     private void run() {
         OriginalCompositeRule originalCompositeRule = new OriginalCompositeRule();
         for (int i = 1; i <= 100; i++) {
-            System.out.println(originalCompositeRule.apply(i)) ;
+            System.out.println(originalCompositeRule.apply(i));
         }
     }
 }
