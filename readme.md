@@ -1,13 +1,19 @@
 # Mini Code Test: FizzBuzz
 
-### What is FizzBuzz
-FizzBuzz is an application that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of 
-the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and 
-the application five prints “FizzBuzz”.
+### Running the Application
 
+To run the original application.
 
-### Running the Tests
-To run tests simply run "mvn clean test" from the commandline.
+To run the stagetwo application.
+
+### Running Tests
+To run tests "mvn clean test"
 
 ### Test Results
-Results are visible in the commandline shell after running tests.
+Results are visible in the shell after running tests.
+
+### Future Improvements
+Included functionality to launch the application via Maven using a suitable plugin.
+
+### Notes
+Every thing executes successfully on my mac - macOS Mojave 10.14.6
