@@ -3,6 +3,10 @@ package com.jfsoftware.rule.original;
 import com.jfsoftware.rule.NoMatchRule;
 import com.jfsoftware.rule.Rule;
 
+/**
+ * A composite rule that composes a rule from other rules in the original fizzBuzz problem.
+ *
+ */
 public class OriginalCompositeRule implements Rule {
 
     private OriginalFizzBuzzRule fizzBuzzRule;

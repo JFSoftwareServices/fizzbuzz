@@ -2,6 +2,10 @@ package com.jfsoftware.rule.original;
 
 import com.jfsoftware.rule.Rule;
 
+/**
+ * A rule that describes the conditions under which the "Fizz" is returned in the original fizzBuzz problem.
+ *
+ */
 public class OriginalFizzRule implements Rule {
     private Rule next;
 
