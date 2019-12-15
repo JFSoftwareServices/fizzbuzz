@@ -14,11 +14,11 @@ public class Number {
         return number % num == 0;
     }
 
-    private boolean containsNumber(int num) { //TODO
+    private boolean contains(int num) {
         return valueOf(number).contains(valueOf(num));
     }
 
-    public boolean isMultipleOfOrContains(final int num) {
-        return isMultipleOf(num) || containsNumber(num);
+    public boolean isMultipleOfOrContains(int num) {
+        return isMultipleOf(num) || contains(num);
     }
 }
