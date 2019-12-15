@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import static java.lang.String.valueOf;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -17,7 +18,7 @@ class StageTwoFizzBuzzTest {
 
     @BeforeEach
     void createCompositeRule() {
-        System.setProperty("application", "stagetwo");
+        System.setProperty("application", "stageTwo");
         rule = CompositeRuleFactory.create();
     }
 
@@ -42,6 +43,6 @@ class StageTwoFizzBuzzTest {
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 4, 7})
     void notMultiplesOfThreeOrFiveAndDoesNotContainThreeOrFive(int number) {
-        assertThat(rule.apply(number)).isEqualTo(number);
+        assertThat(rule.apply(number)).isEqualTo(valueOf(number));
     }
 }
