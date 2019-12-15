@@ -1,6 +1,6 @@
 package com.jfsoftware;
 
-import com.jfsoftware.rule.original.FizzRule;
+import com.jfsoftware.rule.original.OriginalFizzRule;
 import com.jfsoftware.rule.NoMatchRule;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -14,13 +14,13 @@ import static org.assertj.core.api.Assertions.assertThat;
  * <p>
  * Additionally the test are executed at value boundaries, for example 3 and 99 when testing that "Fizz" is returned.
  */
-class FizzRuleTest {
+class OriginalFizzRuleTest {
 
 
     @ParameterizedTest
     @ValueSource(ints = {3, 99})
     void ruleShouldReturnFizzForIntegersThatAreMultiplesOffThree(int integer) {
-        FizzRule rule = new FizzRule(null);
+        OriginalFizzRule rule = new OriginalFizzRule(null);
         assertThat(rule.apply(integer)).isEqualTo("Fizz");
     }
 
@@ -28,7 +28,7 @@ class FizzRuleTest {
     @ParameterizedTest
     @ValueSource(ints = {1, 100})
     void ruleShouldRReturnIntegerIfNextRuleIsSetToNoMatchAndIntegerIsNotAMultipleOfFThree(int integer) {
-        FizzRule rule = new FizzRule(new NoMatchRule());
+        OriginalFizzRule rule = new OriginalFizzRule(new NoMatchRule());
         assertThat(rule.apply(integer)).isEqualTo(String.valueOf(integer));
     }
 

@@ -1,6 +1,6 @@
 package com.jfsoftware.rule;
 
-import com.jfsoftware.rule.original.CompositeRule;
+import com.jfsoftware.rule.original.OriginalCompositeRule;
 
 public class FizzBuzzApplication {
     public static void main(String[] args) {
@@ -8,9 +8,9 @@ public class FizzBuzzApplication {
     }
 
     private void run() {
-        CompositeRule compositeRule = new CompositeRule();
+        OriginalCompositeRule originalCompositeRule = new OriginalCompositeRule();
         for (int i = 1; i <= 100; i++) {
-            System.out.println(compositeRule.apply(i)) ;
+            System.out.println(originalCompositeRule.apply(i)) ;
         }
     }
 }

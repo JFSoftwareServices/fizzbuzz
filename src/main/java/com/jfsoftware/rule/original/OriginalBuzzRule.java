@@ -2,10 +2,10 @@ package com.jfsoftware.rule.original;
 
 import com.jfsoftware.rule.Rule;
 
-public class BuzzRule implements Rule {
+public class OriginalBuzzRule implements Rule {
     private Rule next;
 
-    BuzzRule(Rule next) {
+    public OriginalBuzzRule(Rule next) {
         this.next = next;
     }
 
