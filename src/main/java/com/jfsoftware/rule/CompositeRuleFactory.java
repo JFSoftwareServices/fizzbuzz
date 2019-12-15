@@ -8,10 +8,9 @@ import static java.lang.System.getProperty;
 /**
  * This factory returns the CompositeRule to be used during application execution.
  * <p>
- * The rule is created dynamically depending on the the value of the application system property set.
+ * The rule is created dynamically depending on the the value of a system property called "application".
  * <p>
- * The system property application is set from the commandline as either -Dapplication=original or
- * -Dapplication=stageTwo
+ * The system property "application" is set from the command line as either "original" or "stageTwo".
  */
 public final class CompositeRuleFactory {
     private static final String APPLICATION = "application";
@@ -29,7 +28,7 @@ public final class CompositeRuleFactory {
         } else if (getProperty(APPLICATION).equals("stageTwo")) {
             rule = new StageTwoCompositeRule();
         } else {
-            throw new IllegalArgumentException("Set system property using either '-Dapplication=original' or '-Dapplication=stageTwo'");
+            throw new IllegalArgumentException("Set system property 'application' as either 'original' or 'stageTwo'");
         }
 
         return rule;

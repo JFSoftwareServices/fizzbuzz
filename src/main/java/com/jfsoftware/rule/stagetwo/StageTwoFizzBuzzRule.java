@@ -5,7 +5,7 @@ import com.jfsoftware.rule.Rule;
 
 
 /**
- * A rule that describes the conditions under which the "FizzBuzz" is returned in stage-two fizzBuzz
+ * A rule that describes the conditions under which the "FizzBuzz" is returned in stage two fizzBuzz
  */
 public class StageTwoFizzBuzzRule implements Rule {
     private Rule next;
