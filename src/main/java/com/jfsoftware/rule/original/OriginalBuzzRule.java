@@ -9,7 +9,7 @@ import com.jfsoftware.rule.Rule;
 public class OriginalBuzzRule implements Rule {
     private Rule next;
 
-    public OriginalBuzzRule(Rule next) {
+    OriginalBuzzRule(Rule next) {
         this.next = next;
     }
 
