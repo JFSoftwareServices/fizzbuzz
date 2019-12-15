@@ -1,4 +1,4 @@
-package com.jfsoftware.rule;
+package com.jfsoftware;
 
 import com.jfsoftware.rule.original.OriginalCompositeRule;
 
