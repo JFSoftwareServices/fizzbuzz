@@ -23,25 +23,25 @@ class StageTwoFizzBuzzTest {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {5, 10, 20,})
+    @ValueSource(ints = {5, 10, 20, 25, 40, 50, 52})
     void multiplesOfFiveOrContainFive(int number) {
         assertThat(rule.apply(number)).isEqualTo("Buzz");
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {3, 6, 13})
+    @ValueSource(ints = {3, 6, 9, 12, 13, 18, 21, 23, 24, 27, 31, 32, 33, 34, 36, 37, 38, 39, 42, 43, 48})
     void multiplesOfThreeOrContainThree(int number) {
         assertThat(rule.apply(number)).isEqualTo("Fizz");
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {15, 35, 53})
-    void multiplesOfThreeOrContainThreeAndMultipleOfFiveOrContains(int number) {
+    @ValueSource(ints = {15, 30, 35, 45, 51, 53, 54})
+    void multiplesOfThreeOrContainsThreeAndMultipleOfFiveOrContainsFive(int number) {
         assertThat(rule.apply(number)).isEqualTo("FizzBuzz");
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {1, 2, 4, 7})
+    @ValueSource(ints = {1, 2, 4, 7, 8, 11, 14, 16, 17, 19, 22, 26, 28, 29, 41, 44, 46, 47, 49})
     void notMultiplesOfThreeOrFiveAndDoesNotContainThreeOrFive(int number) {
         assertThat(rule.apply(number)).isEqualTo(valueOf(number));
     }
