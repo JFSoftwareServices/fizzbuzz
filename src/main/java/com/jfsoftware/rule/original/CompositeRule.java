@@ -1,4 +1,7 @@
-package com.jfsoftware;
+package com.jfsoftware.rule.original;
+
+import com.jfsoftware.rule.NoMatchRule;
+import com.jfsoftware.rule.Rule;
 
 public class CompositeRule implements Rule {
 

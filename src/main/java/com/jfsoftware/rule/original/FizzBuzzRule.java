@@ -1,4 +1,6 @@
-package com.jfsoftware;
+package com.jfsoftware.rule.original;
+
+import com.jfsoftware.rule.Rule;
 
 public class FizzBuzzRule implements Rule {
     private Rule next;

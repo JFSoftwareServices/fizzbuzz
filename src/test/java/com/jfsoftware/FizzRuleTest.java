@@ -1,5 +1,7 @@
 package com.jfsoftware;
 
+import com.jfsoftware.rule.original.FizzRule;
+import com.jfsoftware.rule.NoMatchRule;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 

@@ -1,4 +1,4 @@
-package com.jfsoftware;
+package com.jfsoftware.rule;
 
 import static java.lang.String.valueOf;
 

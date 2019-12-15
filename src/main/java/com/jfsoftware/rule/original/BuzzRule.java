@@ -1,4 +1,6 @@
-package com.jfsoftware;
+package com.jfsoftware.rule.original;
+
+import com.jfsoftware.rule.Rule;
 
 public class BuzzRule implements Rule {
     private Rule next;

@@ -1,4 +1,6 @@
-package com.jfsoftware;
+package com.jfsoftware.rule;
+
+import com.jfsoftware.rule.original.CompositeRule;
 
 public class FizzBuzzApplication {
     public static void main(String[] args) {
