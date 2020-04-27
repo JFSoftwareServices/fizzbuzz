@@ -1,6 +1,7 @@
 package com.jfsoftware.rule.stagetwo;
 
 import com.jfsoftware.rule.NoMatchRule;
+import com.jfsoftware.rule.Number;
 import com.jfsoftware.rule.Rule;
 
 /**
@@ -17,8 +18,9 @@ public class StageTwoCompositeRule implements Rule {
         fizzBuzzRule = new StageTwoFizzBuzzRule(fizzRule);
     }
 
+
     @Override
-    public String apply(final int number) {
+    public String apply(Number number) {
         return fizzBuzzRule.apply(number);
     }
 }

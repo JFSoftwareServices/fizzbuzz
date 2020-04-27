@@ -15,12 +15,11 @@ public class StageTwoFizzBuzzRule implements Rule {
     }
 
     @Override
-    public String apply(int n) {
-        Number number = new Number(n);
+    public String apply(Number number) {
         if (number.isMultipleOfOrContains(3)
                 && number.isMultipleOfOrContains(5)) {
             return "FizzBuzz";
         }
-        return next.apply(n);
+        return next.apply(number);
     }
 }

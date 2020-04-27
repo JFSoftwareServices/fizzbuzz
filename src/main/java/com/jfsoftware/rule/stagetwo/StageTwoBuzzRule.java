@@ -14,10 +14,10 @@ public class StageTwoBuzzRule implements Rule {
         this.next = next;
     }
 
+
     @Override
-    public String apply(int n) {
-        Number number = new Number(n);
+    public String apply(Number number) {
         return number.isMultipleOfOrContains(5) ?
-                "Buzz" : next.apply(n);
+                "Buzz" : next.apply(number);
     }
 }

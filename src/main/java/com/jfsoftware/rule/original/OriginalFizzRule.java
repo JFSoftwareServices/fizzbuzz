@@ -13,8 +13,9 @@ public class OriginalFizzRule implements Rule {
         this.next = next;
     }
 
+
     @Override
-    public String apply(int number) {
-        return new Number(number).isMultipleOf(3) ? "Fizz" : next.apply(number);
+    public String apply(Number number) {
+        return number.isMultipleOf(3) ? "Fizz" : next.apply(number);
     }
 }

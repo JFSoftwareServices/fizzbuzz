@@ -21,4 +21,9 @@ public class Number {
     public boolean isMultipleOfOrContains(int num) {
         return isMultipleOf(num) || contains(num);
     }
+
+    @Override
+    public String toString() {
+        return String.valueOf(number);
+    }
 }

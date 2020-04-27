@@ -1,6 +1,7 @@
 package com.jfsoftware.rule.original;
 
 import com.jfsoftware.rule.NoMatchRule;
+import com.jfsoftware.rule.Number;
 import com.jfsoftware.rule.Rule;
 
 /**
@@ -18,7 +19,7 @@ public class OriginalCompositeRule implements Rule {
     }
 
     @Override
-    public String apply(int number) {
+    public String apply(Number number) {
         return fizzBuzzRule.apply(number);
     }
 }

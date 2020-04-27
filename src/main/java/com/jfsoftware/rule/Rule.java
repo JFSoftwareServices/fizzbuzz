@@ -1,5 +1,5 @@
 package com.jfsoftware.rule;
 
 public interface Rule {
-    String apply(int integer);
+    String apply(Number number);
 }

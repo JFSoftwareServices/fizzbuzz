@@ -14,7 +14,7 @@ public class OriginalBuzzRule implements Rule {
     }
 
     @Override
-    public String apply(int number) {
-        return new Number(number).isMultipleOf(5) ? "Buzz" : next.apply(number);
+    public String apply(Number number) {
+       return number.isMultipleOf(5) ? "Buzz" : next.apply(number);
     }
 }

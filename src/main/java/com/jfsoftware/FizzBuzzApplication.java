@@ -1,6 +1,7 @@
 package com.jfsoftware;
 
 import com.jfsoftware.rule.CompositeRuleFactory;
+import com.jfsoftware.rule.Number;
 import com.jfsoftware.rule.Rule;
 
 public class FizzBuzzApplication {
@@ -11,7 +12,7 @@ public class FizzBuzzApplication {
     private void run() {
         Rule rule = CompositeRuleFactory.create();
         for (int i = 1; i <= 100; i++) {
-            System.out.println(rule.apply(i));
+            System.out.println(rule.apply(new Number(i)));
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.jfsoftware;
 
 import com.jfsoftware.rule.CompositeRuleFactory;
+import com.jfsoftware.rule.Number;
 import com.jfsoftware.rule.Rule;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -24,25 +25,25 @@ class OriginalFizzBuzzTest {
 
     @ParameterizedTest
     @ValueSource(ints = {5, 10, 20, 25})
-    void multiplesOfFive(int number) {
-        assertThat(rule.apply(number)).isEqualTo("Buzz");
+    void multiplesOfFive(int i) {
+        assertThat(rule.apply(new Number(i))).isEqualTo("Buzz");
     }
 
     @ParameterizedTest
     @ValueSource(ints = {3, 6, 9, 12, 18, 21, 24, 27})
-    void multiplesOfThree(int number) {
-        assertThat(rule.apply(number)).isEqualTo("Fizz");
+    void multiplesOfThree(int i) {
+        assertThat(rule.apply(new Number(i))).isEqualTo("Fizz");
     }
 
     @ParameterizedTest
     @ValueSource(ints = {15, 30})
-    void multiplesOfThreeAndFive(int number) {
-        assertThat(rule.apply(number)).isEqualTo("FizzBuzz");
+    void multiplesOfThreeAndFive(int i) {
+        assertThat(rule.apply(new Number(i))).isEqualTo("FizzBuzz");
     }
 
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 4, 7, 8, 11, 13, 14, 16, 17, 19, 22, 23, 26, 28, 29})
-    void notMultiplesOfThreeOrFive(int number) {
-        assertThat(rule.apply(number)).isEqualTo(valueOf(number));
+    void notMultiplesOfThreeOrFive(int i) {
+        assertThat(rule.apply(new Number(i))).isEqualTo(valueOf(i));
     }
 }

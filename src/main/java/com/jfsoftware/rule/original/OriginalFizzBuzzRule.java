@@ -14,7 +14,7 @@ public class OriginalFizzBuzzRule implements Rule {
     }
 
     @Override
-    public String apply(int number) {
-        return new Number(number).isMultipleOf(15) ? "FizzBuzz" : next.apply(number);
+    public String apply(Number number) {
+        return number.isMultipleOf(15) ? "FizzBuzz" : next.apply(number);
     }
 }
